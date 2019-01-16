@@ -1,0 +1,35 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: EVENT
+#------------------------------------------------------------
+
+CREATE TABLE EVENT(
+        ID_EVENT          Int  Auto_increment  NOT NULL ,
+        NOM_EVENT         Varchar (60) NOT NULL ,
+        DESCRIPTION_EVENT Varchar (100) NOT NULL ,
+        DATE_EVENT        Date NOT NULL ,
+        VALIDATION        Bool NOT NULL ,
+        IMAGE             Varchar (200) NOT NULL ,
+        ID_USER           Int NOT NULL
+	,CONSTRAINT EVENT_PK PRIMARY KEY (ID_EVENT)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: PRODUIT
+#------------------------------------------------------------
+
+CREATE TABLE PRODUIT(
+        ID_PRODUIT          Int  Auto_increment  NOT NULL ,
+        NOM_Produit         Varchar (80) NOT NULL ,
+        DESCRIPTION_Produit Varchar (100) NOT NULL ,
+        PRIX_Produit        Int NOT NULL ,
+        CATEGORI_Produit    Varchar (15) NOT NULL ,
+        COMPTEUR_Produit    Int NOT NULL
+	,CONSTRAINT PRODUIT_PK PRIMARY KEY (ID_PRODUIT)
+)ENGINE=InnoDB;
+

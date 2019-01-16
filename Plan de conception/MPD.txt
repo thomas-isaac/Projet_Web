@@ -1,0 +1,35 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: CENTRE
+#------------------------------------------------------------
+
+CREATE TABLE CENTRE(
+        ID_Centre Int  Auto_increment  NOT NULL ,
+        Ville     Varchar (40) NOT NULL
+	,CONSTRAINT CENTRE_PK PRIMARY KEY (ID_Centre)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: USER
+#------------------------------------------------------------
+
+CREATE TABLE USER(
+        ID_Centre   Int NOT NULL ,
+        ID_USER     Int NOT NULL ,
+        NOM_USER    Varchar (40) NOT NULL ,
+        PRENON_USER Varchar (40) NOT NULL ,
+        Password    Varchar (40) NOT NULL ,
+        Mail        Varchar (40) NOT NULL ,
+        BDE_Membre  Bool NOT NULL ,
+        CESI_Membre Bool NOT NULL ,
+        Ville       Varchar (40) NOT NULL
+	,CONSTRAINT USER_PK PRIMARY KEY (ID_Centre,ID_USER)
+
+	,CONSTRAINT USER_CENTRE_FK FOREIGN KEY (ID_Centre) REFERENCES CENTRE(ID_Centre)
+)ENGINE=InnoDB;
+
