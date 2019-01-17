@@ -18,13 +18,13 @@ $responseA->bindValue(':mail', $mail, PDO::PARAM_STR);
 $responseA->bindValue(':motDePasse', $motDePasse, PDO::PARAM_STR);
 $responseA->execute();
 $resultadmin = $responseA->fetch(PDO::FETCH_OBJ);
-
+echo json_encode($resultadmin);
 if($resultpseudo != false) {
     
     echo "Valide";
 // else result == null
 }
-if ($resultadmin == '1') {
+if ($resultadmin->BDE_MEMBRE == '1') {
     echo("test");
     $response->closeCursor();
     //header('Location:admin.php');
