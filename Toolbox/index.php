@@ -30,10 +30,10 @@ while ($donnees = $response->fetch())
     <p>
 
     <strong>Nom :</strong>  <?php echo $donnees['NOM_USER']; ?><br />
-    <strong>Prenom :</strong>  <?php echo $donnees['PRENON_USER']; ?><br />
-    <strong>Password :</strong>  <?php echo $donnees['Password']; ?><br />
-    <strong>Mail :</strong>  <?php echo $donnees['Mail']; ?><br />
-    <strong>Ville :</strong>  <?php echo $donnees['Ville']; ?><br />
+    <strong>Prenom :</strong>  <?php echo $donnees['PRENOM_USER']; ?><br />
+    <strong>Password :</strong>  <?php echo $donnees['PASSWORD']; ?><br />
+    <strong>Mail :</strong>  <?php echo $donnees['MAIL']; ?><br />
+    <strong>Ville :</strong>  <?php echo $donnees['VILLE']; ?><br />
 
 
    </p>
