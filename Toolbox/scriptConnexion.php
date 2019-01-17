@@ -4,30 +4,28 @@ $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''
 
 $mail = $_POST['mail'];
 $motDePasse = $_POST['motDePasse'];
+$NOM_USER = 'NOM_USER';
+$BDE_MEMBRE = 'BDE_MEMBRE';
+$CESI_MEMBRE = 'CESI_MEMBRE';
 
 // Selects all nicknames identical to the one received by the script
-$response = $bdd->prepare('SELECT NOM_USER FROM user WHERE user.MAIL=:mail and user.PASSWORD=:motDePasse');
+$response = $bdd->prepare('SELECT * FROM user WHERE user.MAIL=:mail and user.PASSWORD=:motDePasse');
 $response->bindValue(':mail', $mail, PDO::PARAM_STR);
 $response->bindValue(':motDePasse', $motDePasse, PDO::PARAM_STR);
 $response->execute();
-$resultpseudo = $response->fetch(PDO::FETCH_OBJ);
+$result = $response->fetch(PDO::FETCH_OBJ);
 
-// Selects all nicknames identical to the one received by the script
-$responseA = $bdd->prepare('SELECT BDE_MEMBRE FROM user WHERE user.MAIL=:mail and user.PASSWORD=:motDePasse');
-$responseA->bindValue(':mail', $mail, PDO::PARAM_STR);
-$responseA->bindValue(':motDePasse', $motDePasse, PDO::PARAM_STR);
-$responseA->execute();
-$resultadmin = $responseA->fetch(PDO::FETCH_OBJ);
-echo json_encode($resultadmin);
-if($resultpseudo != false) {
+
+if($result != false) {
     
     echo "Valide";
-// else result == null
 }
-if ($resultadmin->BDE_MEMBRE == '1') {
-    echo("test");
-    $response->closeCursor();
+if ($result->BDE_MEMBRE == '1') {
+    echo("BDE");
     //header('Location:admin.php');
+}
+if ($result->CESI_MEMBRE == '1') {
+    echo("CESI");
 } else {
     
     echo("erreur");
