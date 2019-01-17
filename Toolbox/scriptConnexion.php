@@ -4,9 +4,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''
 
 $mail = $_POST['mail'];
 $motDePasse = $_POST['motDePasse'];
-$NOM_USER = 'NOM_USER';
-$BDE_MEMBRE = 'BDE_MEMBRE';
-$CESI_MEMBRE = 'CESI_MEMBRE';
+
 
 // Selects all nicknames identical to the one received by the script
 $response = $bdd->prepare('SELECT * FROM user WHERE user.MAIL=:mail and user.PASSWORD=:motDePasse');
