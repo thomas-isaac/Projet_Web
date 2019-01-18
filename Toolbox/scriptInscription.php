@@ -6,19 +6,21 @@ $prenom = $_POST['prenom'];
 $mail = $_POST['mail'];
 $ville = $_POST['ville'];
 $motDePasse = $_POST['motDePasse'];
+$CmotDePasse = $_POST['CmotDePasse'];
 
-/*$response = $bdd->prepare('SELECT pseudo FROM user WHERE pseudo=:pseudo');
-$response->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+
+$response = $bdd->prepare('SELECT MAIL FROM user WHERE MAIL=:MAIL');
+$response->bindValue(':MAIL', $mail, PDO::PARAM_STR);
 $response->execute();
 
 $result = $response->fetch();
 
-if($result) {
+if($result != false ) {
     echo("error");
 
-} else {
+} elseif ($motDePasse == $CmotDePasse){
     
-    echo "Valide";*/
+    echo "Valide";
 
     $requete = $bdd->prepare("INSERT INTO user (NOM_USER, PRENOM_USER, PASSWORD, MAIL, VILLE) VALUES( :nom, :prenom, :motdePasse, :mail, :ville)");
     $requete->bindValue(':nom', $nom, PDO::PARAM_STR);
@@ -27,7 +29,8 @@ if($result) {
     $requete->bindValue(':mail', $mail, PDO::PARAM_STR);
     $requete->bindValue(':ville', $ville, PDO::PARAM_STR);
     $requete->execute();
-//}
+} else {
+    echo "pas valide"; 
+}
 
-//$response->closeCursor();
 ?>

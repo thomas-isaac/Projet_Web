@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 
-<!--####################################
- Auteur : Emma Prudent
- Date : 2017
- Contexte : Prosit Exia CESI - PHP/BDD
- #######################################-->
-
 <html>
 
     <head>
+        <?php $bdd = new PDO('mysql:host=localhost;dbname=projet_web', 'root', '');?>
         <meta charset="utf-8" />
         <title>Projet web</title>
     </head>
@@ -48,14 +43,36 @@
                                     <input id="usernamesignup" name="mail" required="required" type="text" placeholder="mail" />
                                 </p>
 
-                                <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >centre cesi : </label>
-                                    <input id="usernamesignup" name="ville" required="required" type="text" placeholder="ville" />
-                                </p>
-                        
+                                <p>
+                                    centre :
+                                     <select name="ville"> 
+                                  
+                                        <?php
+
+                                         $resultat=$bdd->query("SELECT * FROM centre");
+
+                                         $resultat->setFetchMode(PDO::FETCH_ASSOC);
+
+                                         foreach ($resultat as $data)
+
+                                         {
+
+                                         echo  '<option value="' . $data['VILLE'] . '">' . $data['VILLE'] . '</option>';
+
+                                         }
+
+                                        ?>
+
+                                    </select>
+                                    </p>
                                 <p>     
                                     <label for="passwordsignup" class="youpasswd" data-icon="p" >Mot de passe : </label>
                                     <input id="passwordsignup" name="motDePasse" required="required" type="password" placeholder="mot de passe"/>
+                                </p>
+
+                                <p>     
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p" >Confirmer le Mot de passe : </label>
+                                    <input id="passwordsignup" name="CmotDePasse" required="required" type="password" placeholder="mot de passe"/>
                                 </p>
                                 
                                 <p class="signin button"> 
