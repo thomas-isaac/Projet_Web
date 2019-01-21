@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-
-    <head>
-        <meta charset="utf-8" />
-        <title>Projet web</title>
-    </head>
-
-    <body>
-
-    <!-- L'en-tête -->    
-    <header>
-    </header>
 <?php
     $data = null;
     if ( isset($_GET['id']) ){
@@ -31,7 +17,3 @@
     }
 
 ?>
-
-</body>
-
-</html>

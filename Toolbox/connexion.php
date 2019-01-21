@@ -29,7 +29,7 @@
 
     <main>
 
-    <form method="post" action="scriptConnexion.php" autocomplete="on">
+    <form id="form" method="post" action="scriptConnexion.php" autocomplete="on">
                                 <h1>Connexion</h1> 
                                 <p> 
                                     <label for="mail" class="uname" data-icon="u" > Mail : </label>

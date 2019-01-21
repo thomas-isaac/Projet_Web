@@ -29,7 +29,7 @@
         </header>
 
         <main>
-        <form  method="post" action="scriptInscription.php" autocomplete="on"> 
+        <form  id="form" method="post" action="scriptInscription.php" autocomplete="on"> 
                                 <h1> Inscription </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u" >nom : </label>

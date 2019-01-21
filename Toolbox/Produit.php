@@ -25,7 +25,7 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="register" class="animate form">
-                            <form  method="post" action="scriptProduit.php" autocomplete="on"> 
+                            <form enctype="multipart/form-data" method="post" action="scriptProduit.php" autocomplete="on"> 
                                 <h1> Inscription </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u" >nom : </label>
@@ -49,11 +49,11 @@
                         
                                 <p>     
                                     <label for="passwordsignup" class="youpasswd" data-icon="p" >Image : </label>
-                                    <input type="file" name="Image" size=50 />
+                                    <input type="file" name="fileToUpload" id="fileToUpload">
                                 </p>
                                 
                                 <p class="signin button"> 
-                                    <input type="submit" value="Inscrire"/> 
+                                    <input type="submit" value="Upload Image" name="submit"/> 
                                 </p>
                             </form>
                         </div>
