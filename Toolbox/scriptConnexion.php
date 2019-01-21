@@ -20,7 +20,6 @@ if($result != false) {
 }
 if ($result->BDE_MEMBRE == '1') {
     echo("BDE");
-    //header('Location:admin.php');
 }
 if ($result->CESI_MEMBRE == '1') {
     echo("CESI");
