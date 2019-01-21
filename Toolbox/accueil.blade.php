@@ -28,24 +28,25 @@
         </header>
 
         <main>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
+          <p>accueil</P>
         </main>
 
      </body>

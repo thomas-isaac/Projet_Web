@@ -28,24 +28,7 @@
         </header>
 
         <main>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
+          <p>blablablablabla evnt blablablablablabla</p>
         </main>
 
      </body>

@@ -14,8 +14,9 @@
 <body>
         <header>
          <div id="conteneur">
-          <img src="pictures/Logo_CESI.png" id="Logo_CESI" class="element">
-          <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
+          <img src="pictures/Logo_CESI.png" id="Logo_CESI" >
+          <img src="pictures/Logo_BDE.png" id="Logo_BDE" >
+          <img src="pictures/panier.png" id="panier">
           <a id="btn1" href="connexion.php">Connexion</a>
         </div>
 
@@ -28,24 +29,29 @@
         </header>
 
         <main>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
-          <p>connexion</p>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
+          <p>boutique</P>
         </main>
 
      </body>
