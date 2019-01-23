@@ -8,90 +8,67 @@
         <link href= "style.css" rel="stylesheet"  type="text/css"/>
         <link rel="icon" type="image/png" href="pictures/Logo_BDE.png"/>      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <?php    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
-        <title>Les PANGU du CESI</title>
+        <title>Insription</title>
     </head>
 
 <body>
-        <header>
-         <div id="conteneur">
-          <a href="https://www.cesi.fr/" ><img src="pictures/Logo_CESI.png" id="Logo_CESI" class="element" ></a>
-          <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
-          <a id="btn1" href="connexion.php">Connexion</a>
-        </div>
-
-        <div id="conteneur1">
-          <a id="btn" href="accueil.blade.php">Accueil</a>
-          <a id="btn" href="boutique.php">Boutique</a>
-          <a id="btn" href="event.php">Events</a>
-          <a id="btn" href="boite.php">Boite à idées</a>
-        </div>
-        </header>
+        <?php include("header.php"); ?>
 
         <main>
-        <form  id="form" method="post" action="scriptInscription.php" autocomplete="on"> 
-                                <h1> Inscription </h1> 
+            <form  id="form" method="post" action="scriptInscription.php" autocomplete="on"> 
+                                <h1> Inscription </h1> <br>
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >nom : </label>
-                                    <input id="usernamesignup" name="nom" required="required" type="text" placeholder="nom" />
-                                </p>
+                                    <label for="usernamesignup" class="uname" data-icon="u" >nom : </label><br>
+                                    <input id="usernamesignup" name="nom" required="required" type="text" placeholder="Nom" />
+                                </p><br>
 
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >prénom : </label>
-                                    <input id="usernamesignup" name="prenom" required="required" type="text" placeholder="prenom" />
-                                </p>
+                                    <label for="usernamesignup" class="uname" data-icon="u" >prénom : </label><br>
+                                    <input id="usernamesignup" name="prenom" required="required" type="text" placeholder="Prenom" />
+                                </p><br>
 
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >mail : </label>
-                                    <input id="usernamesignup" name="mail" required="required" type="text" placeholder="mail" />
-                                </p>
+                                    <label for="usernamesignup" class="uname" data-icon="u" >mail : </label><br>
+                                    <input id="usernamesignup" name="mail" required="required" type="text" placeholder="Mail" />
+                                </p><br>
 
                                 <p>
-                                    centre :
+                                    <strong>centre :</strong>
                                      <select name="ville"> 
                                   
                                         <?php
-
                                          $resultat=$bdd->query("SELECT * FROM centre");
-
                                          $resultat->setFetchMode(PDO::FETCH_ASSOC);
-
                                          foreach ($resultat as $data)
-
                                          {
-
                                          echo  '<option value="' . $data['VILLE'] . '">' . $data['VILLE'] . '</option>';
-
                                          }
-
                                         ?>
 
                                     </select>
-                                    </p>
+                                    </p><br>
                                 <p>     
-                                    <label for="passwordsignup" class="youpasswd" data-icon="p" >Mot de passe : </label>
-                                    <input id="passwordsignup" name="motDePasse" required="required" type="password" placeholder="mot de passe"/>
-                                </p>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p" >Mot de passe : </label><br>
+                                    <input id="passwordsignup" name="motDePasse" required="required" type="password" placeholder="Mot de passe"/>
+                                </p><br>
 
                                 <p>     
-                                    <label for="passwordsignup" class="youpasswd" data-icon="p" >Confirmer le Mot de passe : </label>
-                                    <input id="passwordsignup" name="CmotDePasse" required="required" type="password" placeholder="mot de passe"/>
-                                </p>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p" >Confirmer le Mot de passe : </label><br>
+                                    <input id="passwordsignup" name="CmotDePasse" required="required" type="password" placeholder="Mot de passe"/>
+                                </p><br>
                                 
-                                <p class="signin button"> 
-                                    <input type="submit" value="S'inscrire"/> 
+                                <p class="signin button" > 
+                                    <input type="submit" value="S'inscrire" id="signin-button"/> 
                                 </p>
                                 <p class="change_link">  
                                     Déjà inscrit ?
                                     <a href="connexion.php" class="to_register"> Connexion </a>
                                 </p>
-                            </form>
+            </form>
         </main>
 
      </body>
 
-     <footer>
-       <h5>coucou</h5>
-     </footer>
+     <?php include("footer.php"); ?>
 
 </html>
