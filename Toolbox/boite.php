@@ -8,24 +8,11 @@
         <link href= "style.css" rel="stylesheet"  type="text/css"/>
         <link rel="icon" type="image/png" href="pictures/Logo_BDE.png"/>      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Les PANGU du CESI</title>
+        <title>Boîte à idées</title>
     </head>
 
 <body>
-        <header>
-         <div id="conteneur">
-          <img src="pictures/Logo_CESI.png" id="Logo_CESI" class="element">
-          <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
-          <a id="btn1" href="connexion.php">Connexion</a>
-        </div>
-
-        <div id="conteneur1">
-          <a id="btn" href="accueil.blade.php">Accueil</a>
-          <a id="btn" href="boutique.php">Boutique</a>
-          <a id="btn" href="event.php">Events</a>
-          <a id="btn" href="boite.php">Boite à idées</a>
-        </div>
-        </header>
+        <?php include("header.php"); ?>
 
         <main>
           <p>boit à idées</a>
@@ -49,8 +36,6 @@
 
      </body>
 
-     <footer>
-       <h5>coucou</h5>
-     </footer>
+     <?php include("footer.php"); ?>
 
 </html>
