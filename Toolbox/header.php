@@ -6,7 +6,7 @@
         </div>
 
         <div id="conteneur1">
-          <a id="btn" href="accueil.blade.php">Accueil</a>
+          <a id="btn" href="accueil.php">Accueil</a>
           <a id="btn" href="boutique.php">Boutique</a>
           <a id="btn" href="event.php">Events</a>
           <a id="btn" href="boite.php">Boite à idées</a>
