@@ -58,7 +58,7 @@ header
 
 #Logo_BDE
 {
-    height: 65%;
+    height: 63%;
     margin-top: 5%;
     float: top;
 }
@@ -124,6 +124,15 @@ main
     color: white;
     background-color: black;
 }
+#slider
+{
+    margin-top: 7%;
+    margin-bottom: 7%;
+    height: 50%;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
 .text
 {
     border: none;
@@ -131,8 +140,10 @@ main
 }
 #paperasse
 {
+    margin-top: 3%;
     margin-left: 2%;
     margin-right: 5%;
+    margin-bottom: 4%;
 }
 #form
 {
@@ -204,7 +215,8 @@ footer
                     /*----------------------------------------------------------------------*/
 
 
-@media all and (max-device-width: 480px)
+
+@media all and (max-device-width: 601px)
 {
     html
     {
@@ -215,21 +227,19 @@ footer
     {
         background-image: none;
         width: 100%;
-        height: 20vh;
-        position: fixed;
-        
+        height: 30%;    
     }
     #conteneur
     {
-        background-color: rgb(43, 80, 145);
+        background-color: rgb(255, 194, 82);
         height: 70%;
     }
     #Logo_BDE
     {
+       margin-left: 25%;
        margin-top: 1.5%;
-       width: 27%;
-       height: 95%;
-
+       height: 35%;
+       width: 35%;
     }
     #Logo_CESI
     {
@@ -238,10 +248,10 @@ footer
 
     #conteneur1
     {
-        background-color:rgb(43, 80, 145);
-	    display: flex;
-        justify-content: column;
-        height: 30%;
+        background-color: rgb(255, 194, 82);
+        display: flex;
+        flex-wrap: wrap;
+        height: 80%;
 	    margin-bottom: 5%;
         padding: 0;
         margin-top: 0;
@@ -249,13 +259,13 @@ footer
     #btn
     {
         margin-bottom: 5%;
-        margin-top: 1%;
+        margin-top: 3%;
         border: none;
         color: black;
         padding: 0;
-        font-size: 13px;
-        width: 20%;
-        height: 60%;
+        font-size: 150%;
+        width: 30%;
+        height: 20%;
         font-family: Arial, Helvetica, sans-serif;
         cursor: pointer;
         background-color: #fff;
@@ -263,26 +273,60 @@ footer
     }
     #btn1
     {
-        display: none;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        width: 20%;
+        height: 20%;
+        margin-top: 10%;
     }
     body
     {
+        height: 100%;
         background-color: #000;
+    }
+    #signin-button
+    {
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    }
+    #signin-button:hover
+    {
+        cursor: pointer;
+        background-color: #fff;
+        color: black;
+    }
+    #login-button
+    {
+        cursor: pointer;
+        background-color:white;
+        color: black;
+    }
+    #login-button:hover
+    {
+        cursor: pointer;
+        background-color: #fff;
+        color: black;
+    }
+    #paperasse
+    {
+        margin-top: 7%;
+        margin-left: 10%;
+        margin-right: 9%;
+        margin-bottom: 7%;
     }
     footer
     {
+        position: bottom;
         background-color: #fff;
         height: 10vh;
-        margin-bottom: 0%
+        margin-bottom: 0%;
     }
     #footerlogo
     {
         width: 97%;
     }
-    #mentions
-    {
-        font-size: 70%;
-    } 
+    
     #facebook #twitter #youtube #gmail
     {
         width: 2%;
