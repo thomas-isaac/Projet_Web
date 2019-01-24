@@ -12,7 +12,7 @@
     </head>
 
 <body>
-        <?php include("header.php"); ?>
+        <?php include("headerBoutique.php"); ?>
 
         <main>
           <p>boutique</P>
