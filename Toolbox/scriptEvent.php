@@ -56,7 +56,7 @@ $CATEGORY = $_POST['CATEGORY'];
                 $req->bindValue(':image', $_FILES["fileToUpload"]["name"], PDO::PARAM_STR);
                 $req->execute();
 
-                $reqs = $bdd->prepare("INSERT INTO avoir(ID_IMAGE, ID_EVENT) VALUES((SELECT ID_IMAGE FROM image WHERE LIEN_IMAGE = ':image'), (SELECT MAX(ID_EVENT) FROM event)");
+                $reqs = $bdd->prepare("INSERT INTO avoir(ID_IMAGE, ID_EVENT) VALUES((SELECT ID_IMAGE FROM image WHERE LIEN_IMAGE = :image), (SELECT MAX(ID_EVENT) FROM event))");
                 $reqs->bindValue(':image', $_FILES["fileToUpload"]["name"], PDO::PARAM_STR);
                 $reqs->execute();
     
