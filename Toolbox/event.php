@@ -29,6 +29,10 @@
         </header>
 
         <main>
+        <?php 
+        session_start();
+        if($_SESSION['log'] == 1){ ?>
+
                             <form  method="post" action="scriptEvent.php" autocomplete="on" enctype="multipart/form-data"> 
                                 <h1> idée </h1> 
                                 <p> 
@@ -55,7 +59,13 @@
                                     <input type="submit" value="Upload Image" name="submit"/> 
                                 </p>
                             </form>
-                            </main>
+                                    
+        <?php }else{
+            echo "connecter vous pour acceder a ce contenue";?>
+        <li><a href="connexion.php">connexion</a></li>
+        
+        <?php } ?>
+        </main>
 
 </body>
 
