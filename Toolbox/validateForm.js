@@ -2,7 +2,8 @@ function validateForm() {
 			var index;
 			var upp = false;
 			var num = false;
-			var pwd = document.forms["myForm"]["fname"].value;
+			var pwd = document.forms["myForm"]["pwd"].value;
+			var confPwd = document.forms["myForm"]["confPwd"].value;
 			var charac;
 
 			for(index = 0; index < pwd.length; index++) {
@@ -16,8 +17,12 @@ function validateForm() {
 				else {
 				}
 			}
-			if(upp == num == false){
+			if(upp == false || num == false){
 				alert("Password must contain at least one uppercase character and one numerical value");
+				return false;
+			}
+			else if(pwd != confPwd){
+				alert("Passwords do not match");
 				return false;
 			}
  }
