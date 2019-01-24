@@ -29,7 +29,7 @@
         </header>
 
         <main>
-                            <form  method="post" action="scriptEvent.php" autocomplete="on"> 
+                            <form  method="post" action="scriptEvent.php" autocomplete="on" enctype="multipart/form-data"> 
                                 <h1> idée </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u" >nom : </label>
@@ -45,9 +45,14 @@
                                     <label for="usernamesignup" class="uname" data-icon="u" >catégorie : </label>
                                     <input id="usernamesignup" name="CATEGORY" required="required" type="text" placeholder="catégorie" />
                                 </p>
+                        
+                                <p>     
+                                <label for="passwordsignup" class="youpasswd" data-icon="p" >Image : </label>
+                                    <input type="file" name="fileToUpload" id="fileToUpload">
+                                </p>
                                 
                                 <p class="signin button"> 
-                                    <input type="submit" value="Envoi"/> 
+                                    <input type="submit" value="Upload Image" name="submit"/> 
                                 </p>
                             </form>
                             </main>
