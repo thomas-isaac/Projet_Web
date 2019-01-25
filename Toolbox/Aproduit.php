@@ -47,15 +47,15 @@
                     <div id="produit">
                     <p id="kiloDisplay">
 
-                    <a id="btn2" href=""> <strong>Nom :</strong> <?php echo $donnees['NOM_PRODUIT']; ?><br /></a>
+                    <a id="btn2" href=""> <strong>Nom :</strong> <?php echo $donnees['NOM_PRODUIT']; ?><br></a>
 
                         <p><strong> Image : </strong></p><?php       
             echo '<img id="imageproduit" src="public/image/'.$donnees['IMAGE_PRODUIT'].'"/>';
-                           ?>  <br /> 
+                           ?>  <br> 
                     <div id="infoproduit">    
-                        <strong>Cout : </strong><?php echo $donnees['PRIX_PRODUIT']; ?> € <br /> 
-                        <strong>Catégory : </strong><?php echo $donnees['CATEGORY_PRODUIT']; ?>  <br /> 
-                        <strong>Description : </strong><?php echo $donnees['DESCRIPTION_PRODUIT']; ?>  <br /> 
+                        <strong>Cout : </strong><?php echo $donnees['PRIX_PRODUIT']; ?> € <br> 
+                        <strong>Catégory : </strong><?php echo $donnees['CATEGORY_PRODUIT']; ?>  <br> 
+                        <strong>Description : </strong><?php echo $donnees['DESCRIPTION_PRODUIT']; ?>  <br> 
 
 
                         </div>
