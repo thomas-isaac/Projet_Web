@@ -65,6 +65,23 @@ $CATEGORY = $_POST['CATEGORY'];
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
+            
+            $file = $target_file;
+
+
+            ob_start();
+
+            $img = imagecreatefromjpeg($file);
+            imagepng($img);
+
+            // get contents from the buffer
+            $contents = ob_get_clean();
+
+            $zip = new ZipArchive();
+            $zip->open('pictures.zip', ZipArchive::CREATE);
+
+            // and put them in the zip file...
+            $zip->addFromString($_FILES["fileToUpload"]["tmp_name"], $contents);
         }
 
 ?>
