@@ -1,8 +1,20 @@
+
 <header>
          <div id="conteneur">
           <img src="pictures/Logo_CESI.png" id="Logo_CESI" class="element">
           <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
-          <a id="btn1" href="connexion.php" style="width: 9%; height: 8%; font-size: 150%;">Connexion</a>
+          <?php 
+          session_start();
+          if ($_SESSION['log'] = 1)
+          { ?>
+            <a id="btn1" href="logout.php" style="width: 10.5%; height: 8%; font-size: 120%;">Se déconnecter</a>
+            <?php
+          }
+          else
+          { ?>
+          <a id="btn1" href="connexion.php" style="width: 9%; height: 8%; font-size: 140%;">Connexion</a>
+          <?php
+          } ?>
         </div>
 
         <div id="conteneur1">

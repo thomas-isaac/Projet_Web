@@ -4,7 +4,18 @@
           <img src="pictures/Logo_CESI.png" id="Logo_CESI" class="element">
           <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
           <div id="conteneur15">
-            <a id="btn1" href="connexion.php" style="width: 75%; height: 9%; font-size: 150%;">Connexion</a>
+            <?php 
+           session_start();
+            if ($_SESSION['log'] = 1)
+           { ?>
+             <a id="btn1" href="logout.php" style="width: 100.5%; height: 9%; font-size: 111%;">Se déconnecter</a>
+              <?php
+            }
+            else
+            { ?>
+             <a id="btn1" href="connexion.php" style="width: 9%; height: 8%; font-size: 140%;">Connexion</a>
+            <?php
+             } ?>
             <a href="panier.php" id="panier"><img src="pictures/panier.png" id="panier"></a>
           </div>
         </div>

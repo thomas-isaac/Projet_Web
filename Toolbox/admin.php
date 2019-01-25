@@ -18,12 +18,16 @@
         <main>
           <div id="adminpage">
           <div id="download">
-          <h2>Si vous voulez télécharger tout les photos</h2><br />
+          <h3>Si vous voulez télécharger tout les photos</h3><br>
           <p><a id="btn2" href="dl.php">Télécharger</a></p>  
           </div>
           <div id="signaler">
-          <h2>Si vous souhaitez signaler un contenu non approprié</h2><br/>
-          <p><a id="btn2" href="report.php">Signaler</a></p>
+          <h3>Si vous souhaitez signaler un contenu non approprié</h3><br>
+          <p><a id="btn2" href="mailto: ?to=bde-rouen@viacesi.fr
+        &subject=Signalisation%20de%20contenue%20inapproprie
+        &body=Categorie(commentaire, photos..)%20:%0D%0A%0D%0A
+Ou%20ca%20?%20(Quel evenement)%20:%0D%0A%0D%0A
+Description%20du%20contenu%20inapproprie%20:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A">Signaler</a></p>
           </div>
           </div>
         </main>
