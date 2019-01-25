@@ -8,33 +8,33 @@
         <link href= "style.css" rel="stylesheet"  type="text/css"/>
         <link rel="icon" type="image/png" href="pictures/Logo_BDE.png"/>      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <?php    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
-        <title>Les PANGU du CESI</title>
+        <title>Evénements</title>
     </head>
 
 <body>
-        <?php include("header.php"); ?>
 
-        <main>
+    <?php include("header.php"); ?>
+
+    <main>
         <?php 
-        session_start();
         if($_SESSION['log'] == 1){ ?>
-
+                        <div id="idée" style="text-align: center;">
+                        <br><br>
                             <form  method="post" action="scriptEvent.php" autocomplete="on" enctype="multipart/form-data"> 
-                                <h1> idée </h1> 
+                                <h2> Vous avez une idée ? </h2> <br><br>
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >nom : </label>
-                                    <input id="usernamesignup" name="nom" required="required" type="text" placeholder="nom" />
+                                    <label for="usernamesignup" class="uname" data-icon="u" >Nom : </label>
+                                    <input id="usernamesignup" name="nom" required="required" type="text" placeholder="Nom" />
                                 </p>
 
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >description : </label>
-                                    <input id="usernamesignup" name="description" required="required" type="text" placeholder="description" />
+                                    <label for="usernamesignup" class="uname" data-icon="u" >Description : </label>
+                                    <input id="usernamesignup" name="description" required="required" type="text" placeholder="Description" />
                                 </p>
 
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >catégorie : </label>
-                                    <input id="usernamesignup" name="CATEGORY" required="required" type="text" placeholder="catégorie" />
+                                    <label for="usernamesignup" class="uname" data-icon="u" >Catégorie : </label>
+                                    <input id="usernamesignup" name="CATEGORY" required="required" type="text" placeholder="Catégorie" />
                                 </p>
                         
                                 <p>     
@@ -43,19 +43,21 @@
                                 </p>
                                 
                                 <p class="signin button"> 
-                                    <input type="submit" value="Upload Image" name="submit"/> 
+                                    <input type="submit" id="btn1" value="Upload Image" name="submit" style="width: 8%;"/> 
                                 </p>
+                                <br>
                             </form>
+                        </div>
                                     
-        <?php }else{
-            echo "connecter vous pour acceder a ce contenue";?>
-        <li><a href="connexion.php">connexion</a></li>
+        <?php }else{ ?>
+        <h2> Vous devez vous connecter pour pouvoir proposer un event </h2>
+        <a href="connexion.php">connexion</a>
         
         <?php } ?>
-        </main>
+</main>
 
-</body>
+     </body>
 
-<?php include("footer.php"); ?>
+     <?php include("footer.php"); ?>
 
 </html>
