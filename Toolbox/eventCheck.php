@@ -53,7 +53,7 @@
                 SELECT * FROM `event` 
                 INNER JOIN avoir ON event.ID_EVENT = avoir.ID_EVENT
                 INNER JOIN image ON avoir.ID_IMAGE = image.ID_IMAGE
-                WHERE event.VALIDATION = 0  AND event.MOIS_EVENT = 0 ');
+                WHERE event.VALIDATION = 1 ');
 
 
 
@@ -69,7 +69,7 @@
 
                     Image : <?php       
             echo '<img src="public/image/'.$donnees['LIEN_IMAGE'].'"/>';
-                           ?>  <br />       
+                           ?>  <br />    
 
 
 
