@@ -11,56 +11,29 @@
         <?php    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
         <title>Les PANGU du CESI</title>
     </head>
-
+    <?php include("header.php"); ?>
 <body>
-        <header>
-         <div id="conteneur">
-          <img src="pictures/Logo_CESI.png" id="Logo_CESI" class="element">
-          <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
-          <a id="btn1" href="connexion.php">Connexion</a>
-        </div>
 
-        <div id="conteneur1">
-          <a id="btn" href="accueil.blade.php">Accueil</a>
-          <a id="btn" href="boutique.php">Boutique</a>
-          <a id="btn" href="event.php">Events</a>
-          <a id="btn" href="boite.php">Boite à idées</a>
-        </div>
-        </header>
 
         <main>
 
         <?php
         session_start();
-
                 try
-
                 {
-
                     $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', '');
-
                 }
-
                 catch(Exception $e)
-
                 {
-
                         die('Erreur : '.$e->getMessage());
-
                 }
-
                 $reponse = $bdd->query('
                 SELECT * FROM `event` 
                 INNER JOIN avoir ON event.ID_EVENT = avoir.ID_EVENT
                 INNER JOIN image ON avoir.ID_IMAGE = image.ID_IMAGE
                 WHERE event.MOIS_EVENT = 1 ');
-
-
-
                 while ($donnees = $reponse->fetch())
-
                 {
-
                 ?>
 
                     <p id="kiloDisplay">
@@ -76,19 +49,14 @@
                 </p>
 
                 <?php
-
                   }
-
                  $reponse->closeCursor(); 
-
                 ?>
 
         </main>
 
      </body>
 
-     <footer>
-       <h5>coucou</h5>
-     </footer>
+<?php include("footer.php"); ?>
 
 </html>
