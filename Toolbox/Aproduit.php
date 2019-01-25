@@ -11,25 +11,13 @@
         <?php    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
         <title>Les PANGU du CESI</title>
     </head>
-
+    
+         <?php include("header.php"); ?>
 <body>
-        <header>
-         <div id="conteneur">
-          <img src="pictures/Logo_CESI.png" id="Logo_CESI" class="element">
-          <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
-          <a id="btn1" href="connexion.php">Connexion</a>
-        </div>
 
-        <div id="conteneur1">
-          <a id="btn" href="accueil.blade.php">Accueil</a>
-          <a id="btn" href="boutique.php">Boutique</a>
-          <a id="btn" href="event.php">Events</a>
-          <a id="btn" href="boite.php">Boite à idées</a>
-        </div>
-        </header>
 
         <main>
-
+          <div id="wrap">
         <?php
 
                 try
@@ -56,21 +44,22 @@
                 {
 
                 ?>
-
+                    <div id="produit">
                     <p id="kiloDisplay">
 
-                    <strong>Nom :</strong> <?php echo $donnees['NOM_PRODUIT']; ?><br />
+                    <a id="btn2" href=""> <strong>Nom :</strong> <?php echo $donnees['NOM_PRODUIT']; ?><br /></a>
 
-                    Cout : <?php echo $donnees['PRIX_PRODUIT']; ?> € <br /> 
-                    Catégory : <?php echo $donnees['CATEGORY_PRODUIT']; ?>  <br /> 
-                    Description : <?php echo $donnees['DESCRIPTION_PRODUIT']; ?>  <br /> 
-
-                    Image : <?php       
-            echo '<img src="public/image/'.$donnees['IMAGE_PRODUIT'].'"/>';
+                        <p><strong> Image : </strong></p><?php       
+            echo '<img id="imageproduit" src="public/image/'.$donnees['IMAGE_PRODUIT'].'"/>';
                            ?>  <br /> 
+                    <div id="infoproduit">    
+                        <strong>Cout : </strong><?php echo $donnees['PRIX_PRODUIT']; ?> € <br /> 
+                        <strong>Catégory : </strong><?php echo $donnees['CATEGORY_PRODUIT']; ?>  <br /> 
+                        <strong>Description : </strong><?php echo $donnees['DESCRIPTION_PRODUIT']; ?>  <br /> 
 
 
-                </p>
+                        </div>
+                        </p></div>
 
                 <?php
 
@@ -79,13 +68,11 @@
                  $reponse->closeCursor(); 
 
                 ?>
-
+            </div>
         </main>
 
      </body>
 
-     <footer>
-       <h5>coucou</h5>
-     </footer>
+    <?php include("footer.php");
 
 </html>
