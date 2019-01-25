@@ -19,7 +19,7 @@
           <div id="adminpage">
           <div id="download">
           <h3>Si vous voulez télécharger tout les photos</h3><br>
-          <p><a id="btn2" href="pictures.zip">Télécharger</a></p>  
+          <p><a id="btn2" href="dl.php">Télécharger</a></p>  
           </div>
           <div id="signaler">
           <h3>Si vous souhaitez signaler un contenu non approprié</h3><br>
