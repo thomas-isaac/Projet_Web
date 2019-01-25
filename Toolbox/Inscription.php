@@ -60,6 +60,7 @@
                                 <p class="signin button" > 
                                     <input type="submit" value="S'inscrire" id="signin-button"/> 
                                 </p>
+                                <input type="checkbox" name="Metions" id="casemention" /> <label for="Mentions">J'ai lu et accepté <a href="mentions.php#mentions"> les mentions légales</a> et <a href="mentions.php#politique"> les mentions légales</a></label><br>
                                 <p class="change_link">  
                                     Déjà inscrit ?
                                     <a href="connexion.php" class="to_register"> Connexion </a>
