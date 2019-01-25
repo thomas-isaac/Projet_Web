@@ -19,7 +19,7 @@
           <div id="adminpage">
           <div id="download">
           <h3>Si vous voulez télécharger tout les photos</h3><br>
-          <p><a id="btn2" href="dl.php">Télécharger</a></p>  
+          <p><a id="btn2" href="pictures.zip">Télécharger</a></p>  
           </div>
           <div id="signaler">
           <h3>Si vous souhaitez signaler un contenu non approprié</h3><br>
@@ -27,6 +27,7 @@
         &subject=Signalisation%20de%20contenue%20inapproprie
         &body=Categorie(commentaire, photos..)%20:%0D%0A%0D%0A
 Ou%20ca%20?%20(Quel evenement)%20:%0D%0A%0D%0A
+Quelle%20photo%20?%0D%0A%0D%0A
 Description%20du%20contenu%20inapproprie%20:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A">Signaler</a></p>
           </div>
           </div>
