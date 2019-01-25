@@ -17,7 +17,7 @@
         <?php include("headerBoutique.php"); ?>
 
         <main>
-
+        <div id="wrap">
         <?php
 
                 try
@@ -46,17 +46,17 @@
                 {
 
                 ?>
-
+                    <div id="event">
                     <p id="kiloDisplay">
 
-                    <strong>Nom :</strong> <?php echo $donnees['NOM_EVENT']; ?><br />
+                    <a id="btn2" href=""><strong>Nom :</strong> <?php echo $donnees['NOM_EVENT']; ?><br /></a>
 
-                    Image : <?php       
-            echo '<img src="public/image/'.$donnees['LIEN_IMAGE'].'"/>';
+                        <p><strong>Image : </strong></a><?php       
+            echo '<img id="imageproduit src="public/image/'.$donnees['LIEN_IMAGE'].'"/>';
                            ?>  <br /> 
 
 
-                </p>
+            </p></div>
 
                 <?php
 
@@ -65,7 +65,7 @@
                  $reponse->closeCursor(); 
 
                 ?>
-
+    </div>
         </main>
 
      </body>
