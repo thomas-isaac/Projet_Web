@@ -8,7 +8,6 @@
         <link href= "style.css" rel="stylesheet"  type="text/css"/>
         <link rel="icon" type="image/png" href="pictures/Logo_BDE.png"/>      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <?php    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
         <title>Les PANGU du CESI</title>
     </head>
     
@@ -17,6 +16,24 @@
 
 
         <main>
+                <?php
+                    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', '');
+
+                $req = $bdd->query('
+                SELECT IMAGE_PRODUIT FROM produit 
+                ORDER BY COMPTEUR_PRODUIT DESC
+                LIMIT 3 '); 
+                
+                $var = 0;
+                $caroussel = null;
+                while ($data = $req ->fetch())
+                {
+                    $caroussel[$var] = $data;
+                    $var+= 1;
+                }
+                    
+                ?>
+
             <div id="slider" class="carousel slide" data-ride="carousel">
   				<ol class="carousel-indicators">
     				<li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -25,19 +42,19 @@
   				</ol>
   				<div class="carousel-inner">
     			<div class="carousel-item active">
-                      <img class="d-block w-100" src="pictures/first.png" alt="First slide">
+                <img class="d-block w-100" src="pictures/<?php echo $caroussel[0]['IMAGE_PRODUIT'] ?>" alt="First slide">
                       <div class="carousel-caption d-none d-md-block">
                         <h3>Gala du BDE 2018</h3>
                       </div>
     			</div>
    				<div class="carousel-item">
-                      <img class="d-block w-100" src="pictures/second.png" alt="Second slide">
+                      <img class="d-block w-100" src="pictures/<?php echo $caroussel[1]['IMAGE_PRODUIT'] ?>" alt="Second slide">
                       <div class="carousel-caption d-none d-md-block">
                         <h3>Acheter les bonnets du BDE ! Ils sont beaux, ils sont frais !</h3>
                         </div>
     			</div>
     			<div class="carousel-item">
-                      <img class="d-block w-100" src="pictures/third.png" alt="Third slide">
+                      <img class="d-block w-100" src="pictures/<?php echo $caroussel[2]['IMAGE_PRODUIT'] ?>" alt="Third slide">
                       <div class="carousel-caption d-none d-md-block">
                         <h3>Vous avez une idée d'événement et vous voulez la partager ? Allez dans la boite à idées !</h3>
                       </div>
@@ -51,24 +68,9 @@
    					<span class="sr-only">Next</span>
   				</a>
 			  </div>
+              </div>
           <div id="wrap">
         <?php
-
-                try
-
-                {
-
-                    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', '');
-
-                }
-
-                catch(Exception $e)
-
-                {
-
-                        die('Erreur : '.$e->getMessage());
-
-                }
 
                 $reponse = $bdd->query('
                 SELECT * FROM `produit` ORDER BY `ID_PRODUIT` ASC ');

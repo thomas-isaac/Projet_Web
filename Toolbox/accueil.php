@@ -12,7 +12,10 @@
     </head>
 
 <body>
-        <?php include("header.php"); ?>
+        <?php include("header.php"); 
+        $_SESSION['logcesi']=0;
+        $_SESSION['logBDE']=0;
+        $_SESSION["log"]=0; ?>
 
         <main>
           <div id="slider" class="carousel slide" data-ride="carousel">
@@ -25,19 +28,19 @@
     			<div class="carousel-item active">
                       <img class="d-block w-100" src="pictures/first.jpg" alt="First slide">
                       <div class="carousel-caption d-none d-md-block">
-                        <h3>Gala du BDE 2011</h3>
+                      <a href="event.php" id="liencar"><h3>Gala du BDE 2011</h3></a>
                       </div>
     			</div>
    				<div class="carousel-item">
                       <img class="d-block w-100" src="pictures/second.png" alt="Second slide">
                       <div class="carousel-caption d-none d-md-block">
-                        <h3>Acheter les bonnets du BDE ! Ils sont beaux, ils sont frais !</h3>
+                      <a href="boutique.php" id="liencar"><h3>Acheter les bonnets du BDE ! Ils sont beaux, ils sont frais !</h3></a>
                         </div>
     			</div>
     			<div class="carousel-item">
                       <img class="d-block w-100" src="pictures/third.gif" alt="Third slide">
                       <div class="carousel-caption d-none d-md-block">
-                        <h3>Vous avez une idée d'événement et vous voulez la partager ? Allez dans la boite à idées !</h3>
+                        <a href="boiteform.php" id="liencar"><h3>Vous avez une idée d'événement et vous voulez la partager ? Allez dans la boite à idées !</h3></a>
                       </div>
     			</div>
   				<a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">

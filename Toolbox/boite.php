@@ -38,11 +38,11 @@
                     <div id="event">
                     <p id="kiloDisplay">
 
-                    <a id="btn2" href="admin.php"> <strong>Nom :</strong> <?php echo $donnees['NOM_EVENT']; ?><br /></a>
+                    <a id="btn2"><h4><strong>Nom :</strong> <?php echo $donnees['NOM_EVENT']; ?><br></h4></a>
 
                     <p><strong>Image :</strong></p> <?php       
             echo '<img id="imageproduit" src="public/image/'.$donnees['LIEN_IMAGE'].'"/>';
-                           ?>  <br />
+                           ?>  <br>
 
 
                 </p></div>
