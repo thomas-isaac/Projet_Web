@@ -50,18 +50,12 @@
                         </div>
                                     
         <?php }else{ ?>
-        <br>
-        <br>
-        <h2> Vous devez vous connecter pour pouvoir proposer un event </h2>
-        <br>
-        <br>
-        <a href="connexion.php">connexion</a>
+        <div id="formboite">
+        <h2> Vous devez vous connecter pour pouvoir proposer un event </h2><br><br>
+        <a id="btn2" href="connexion.php">connexion</a></div>
        
         <?php } ?>
-        <br>
-        <br>
-        <br>
-        <br>
+
 </main>
 
      </body>
