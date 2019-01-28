@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" href="pictures/Logo_BDE.png"/>      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <?php    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
-        <title>Les PANGU du CESI</title>
+        <title>Events</title>
     </head>
 
     <?php include("header.php"); ?>
