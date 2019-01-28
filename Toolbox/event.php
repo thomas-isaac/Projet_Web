@@ -20,6 +20,7 @@
 
         <main>
         <div id="wrap">
+        <a id="btnmois" href="eventMois.php">Voir les événements du mois</a>
         <?php
                 try
                 {
@@ -38,7 +39,7 @@
                 {
                 ?>
 
-                <a id="btnmois" href="eventMois.php">Voir les événements du mois</a>
+              
 
                     <div id="event">
                     <p id="kiloDisplay">
