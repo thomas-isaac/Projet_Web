@@ -15,7 +15,11 @@
 
 <body>
         <?php include("header.php"); ?>
+
         <main>
+
+          <h3>Vous voulez proposer une idée ? c'est <a href="boiteform.php">par ici !</a></h3>
+
           <div id="wrap">
                   <?php
                 try
