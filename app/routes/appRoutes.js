@@ -24,7 +24,7 @@ module.exports = function(app){
 
 	app.route('/users')
 	.get(accessHandler.listUsers)
-	.post(accessHandler.addProducts);
+	.post(accessHandler.addUsers);
 
 	app.route('/users/:user_id')
 	.get(accessHandler.readUser)

@@ -28,4 +28,33 @@ var User = function(user){
 	this.bdeM = user.BDE_MEMBRE;
 	this.cesiM = user.CESI_MEMBRE;
 	this.city = user.VILLE;
-}
+};
+
+Event.listRows = function(table, result){
+	sql.query("SELECT * FROM ?", table, function(err, res){
+		if(err){
+			res.json({"Error: " + err});
+			result(null, err);
+		}
+		else{
+			res.json({result});
+			result(null, res);
+		}
+	});
+};
+
+Event.addRow = function(table, row, result){
+	sql.query("INSERT INTO ? VALUES ?", [table, row], function(err, res){
+		if(err){
+			res.json({"Error:" + err});
+			result(null, err);
+		}
+		else{
+			res.json({result});
+			result(null, res);
+		}
+	});
+};
+Event.readRow = function(table, id, result){};
+Event.modRow = function(table, id, row, result){};
+Event.delRow = function(table, id, result){};
