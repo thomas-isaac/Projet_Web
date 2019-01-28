@@ -18,22 +18,22 @@
             <form  id="form" method="post" action="scriptInscription.php" autocomplete="on"> 
                                 <h1> Inscription </h1> <br>
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >nom : </label><br>
-                                    <input id="usernamesignup" name="nom" required="required" type="text" placeholder="Nom" />
+                                    <label for="usernamesignup" class="uname" data-icon="u" >Nom : </label><br>
+                                    <input name="nom" required="required" type="text" placeholder="Nom" />
                                 </p><br>
 
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >prénom : </label><br>
-                                    <input id="usernamesignup" name="prenom" required="required" type="text" placeholder="Prenom" />
+                                    <label for="usernamesignup" class="uname" data-icon="u" >Prénom : </label><br>
+                                    <input name="prenom" required="required" type="text" placeholder="Prenom" />
                                 </p><br>
 
                                 <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u" >mail : </label><br>
-                                    <input id="usernamesignup" name="mail" required="required" type="text" placeholder="Mail" />
+                                    <label for="usernamesignup" class="uname" data-icon="u" >Mail : </label><br>
+                                    <input name="mail" required="required" type="text" placeholder="Mail" />
                                 </p><br>
 
                                 <p>
-                                    <strong>centre :</strong>
+                                    <strong>Centre :</strong>
                                      <select name="ville"> 
                                   
                                         <?php
@@ -49,18 +49,18 @@
                                     </p><br>
                                 <p>     
                                     <label for="passwordsignup" class="youpasswd" data-icon="p" >Mot de passe : </label><br>
-                                    <input id="passwordsignup" name="motDePasse" required="required" type="password" placeholder="Mot de passe"/>
+                                    <input name="motDePasse" required="required" type="password" placeholder="Mot de passe"/>
                                 </p><br>
 
                                 <p>     
                                     <label for="passwordsignup" class="youpasswd" data-icon="p" >Confirmer le Mot de passe : </label><br>
-                                    <input id="passwordsignup" name="CmotDePasse" required="required" type="password" placeholder="Mot de passe"/>
+                                    <input name="CmotDePasse" required="required" type="password" placeholder="Mot de passe"/>
                                 </p><br>
                                 
                                 <p class="signin button" > 
                                     <input type="submit" value="S'inscrire" id="signin-button"/> 
                                 </p>
-                                <input type="checkbox" name="Metions" id="casemention" /> <label for="Mentions">J'ai lu et accepté <a href="mentions.php#mentions"> les mentions légales</a> et <a href="mentions.php#politique"> les mentions légales</a></label><br>
+                                <input type="checkbox" name="Metions"/> <label for="Mentions">J'ai lu et accepté <a href="mentions.php#mentions"> les mentions légales</a> et <a href="mentions.php#politique"> les mentions légales</a></label><br>
                                 <p class="change_link">  
                                     Déjà inscrit ?
                                     <a href="connexion.php" class="to_register"> Connexion </a>
