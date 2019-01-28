@@ -14,9 +14,11 @@ $response->execute();
 $result = $response->fetch(PDO::FETCH_OBJ);
 
 
+
 if($result != false) {
     
     echo "Vous êtes bien connecté";
+    $_SESSION["mail"]= $mail;
     $_SESSION["log"]=1;
 }
 if ($result->BDE_MEMBRE == '1') {
@@ -26,13 +28,18 @@ if ($result->BDE_MEMBRE == '1') {
 if ($result->CESI_MEMBRE == '1') {
     echo("CESI");
     $_SESSION['logcesi']=1;
-} else {
+} 
+if ($result == false){
     
-    echo("erreur");
+    $_SESSION['logcesi']=0;
+    $_SESSION['logBDE']=0;
+    $_SESSION["log"]=0;
     $response->closeCursor();
 
 }
 
 // frees up the connection
+
+
 
 ?>
