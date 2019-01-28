@@ -6,7 +6,7 @@
           <div id="conteneur15">
             <?php 
            session_start();
-            if ($_SESSION['log'] = 1)
+            if ($_SESSION['log'] == 1)
            { ?>
              <a id="btn1" href="logout.php" style="width: 100.5%; height: 9%; font-size: 111%;">Se déconnecter</a>
               <?php
