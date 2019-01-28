@@ -5,7 +5,7 @@
           <img src="pictures/Logo_BDE.png" id="Logo_BDE" class="element">
           <?php 
           session_start();
-          if ($_SESSION['log'] = 1)
+          if ($_SESSION['log'] == 1)
           { ?>
             <a id="btn1" href="logout.php" style="width: 10.5%; height: 8%; font-size: 120%;">Se déconnecter</a>
             <?php
