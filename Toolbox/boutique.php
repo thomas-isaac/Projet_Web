@@ -92,6 +92,14 @@
                         <strong>Cout : </strong><?php echo $donnees['PRIX_PRODUIT']; ?> € <br> 
                         <strong>Catégory : </strong><?php echo $donnees['CATEGORY_PRODUIT']; ?>  <br> 
                         <strong>Description : </strong><?php echo $donnees['DESCRIPTION_PRODUIT']; ?>  <br> 
+			<?php
+                    	if($_SESSION['log'] == 1){ ?>
+                    		<a id="btnadd" href=""> Ajouter au panier</a>
+                    		<?php } ?>
+			<?php
+			if($_SESSION['logBDE'] == 1){ ?>                    	
+                    		<a id="btnsuppr" href=""> Supprimer</a>
+                    		<?php } ?>
 
 
                         </div>
