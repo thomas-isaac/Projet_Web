@@ -4,12 +4,13 @@
 
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">        <link rel="stylesheet"href="/style/vendors/fontawesome/css/all.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">        
+        <link rel="stylesheet"href="/style/vendors/fontawesome/css/all.min.css"/>
         <link href= "style.css" rel="stylesheet"  type="text/css"/>
         <link rel="icon" type="image/png" href="pictures/Logo_BDE.png"/>      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <?php    $bdd = new PDO('mysql:host=localhost;dbname=projet_web;charset=utf8', 'root', ''); ?>
-        <title>Events</title>
+        <title>Les PANGU du CESI</title>
     </head>
 
     <?php include("header.php"); ?>
@@ -18,7 +19,7 @@
 
 
         <main>
-
+        <div id="wrap">
         <?php
                 try
                 {
@@ -37,23 +38,26 @@
                 {
                 ?>
 
+                <a id="btnmois" href="eventMois.php">Voir les événements du mois</a>
+
+                    <div id="event">
                     <p id="kiloDisplay">
 
-                    <strong>Nom :</strong> <?php echo $donnees['NOM_EVENT']; ?><br />
+                    <a id="btn2" href="admin.php"> <strong>Nom :</strong> <?php echo $donnees['NOM_EVENT']; ?><br></a>
 
-                    Image : <?php       
-            echo '<img src="public/image/'.$donnees['LIEN_IMAGE'].'"/>';
-                           ?>  <br />    
+                    <p><strong>Image :</strong></p> <?php       
+                    echo '<img id="imageproduit" src="public/image/'.$donnees['LIEN_IMAGE'].'"/>';
+                    ?>  <br>    
 
 
 
-                </p>
+                </p></div>
 
                 <?php
                   }
                  $reponse->closeCursor(); 
                 ?>
-
+</div>
         </main>
 
      </body>
