@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Forms JS Validation</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+			Name: <input type="text" name="fname">
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+	<script>
+		function validateForm() {
+			var index;
+			var upp = false;
+			var num = false;
+			var pwd = document.forms["myForm"]["fname"].value;
+			var charac;
+
+			for(index = 0; index < pwd.length; index++) {
+				charac = pwd.charAt(index);
+				if(!isNaN(charac)) {
+					num = true;
+				}
+				else if(charac == charac.toLocaleUpperCase()) {
+					upp = true;
+				}
+				else {
+				}
+			}
+			if(upp == false || num == false){
+				alert("Password must contain at least one uppercase character and one numerical value");
+				return false;
+			}
+		}
+	</script>
+</html>

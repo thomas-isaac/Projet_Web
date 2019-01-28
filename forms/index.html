@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Forms JS Validation</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+			Name: <input type="text" name="fname">
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+	<script>
+		function validateForm() {
+			var index;
+			var valid = false;
+			var x = document.forms["myForm"]["fname"].value;
+			var xCode;
+
+			for(index = 0; index < x.length; index++) {
+				xCode = x.codePointAt(index);
+				if(xCode > 64 && xCode < 91) {
+					valid = true;
+					break;
+				}
+				else if(xCode > 47 && xCode < 58) {
+					valid = true;
+					break;
+				}
+			}
+			if(valid == false){
+				alert("Must contain UpperCase character");
+				return false;
+			}
+		}
+	</script>
+</html>
