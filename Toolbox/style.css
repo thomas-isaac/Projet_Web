@@ -1,3 +1,7 @@
+
+/*------------------------ composants basiques ----------------------------*/
+/*------------------------ composants basiques ----------------------------*/
+/*------------------------ composants basiques ----------------------------*/
 html
 {
     background-color: #292929;
@@ -9,8 +13,15 @@ body
     padding: 0%;
     height: 100vh;
 }
-
-
+main
+{
+    color: white;
+    background-color: #292929;
+}
+ 
+/*-------------------- header -----------------------------*/
+/*-------------------- header -----------------------------*/
+/*-------------------- header -----------------------------*/
 header
 {
     background-image: url("pictures/rouen.png");
@@ -21,7 +32,6 @@ header
     width: 100%;
     height: 60vh;  
 }
-
 #conteneur
 {
     display: flex;
@@ -127,12 +137,9 @@ header
     text-decoration: none;
 }
 
-
-main
-{
-    color: white;
-    background-color: #292929;
-}
+/*------------------ Accueil ----------------*/
+/*------------------ Accueil ----------------*/
+/*------------------ Accueil ----------------*/
 #slider
 {
     margin-top: 7%;
@@ -147,6 +154,10 @@ main
     border: none;
     border-radius: 55px 55px 55px 55px;
 }
+
+/*--------------------- Page mentions légales ------------------------*/
+/*--------------------- Page mentions légales ------------------------*/
+/*--------------------- Page mentions légales ------------------------*/
 #paperasse
 {
     margin-top: 3%;
@@ -154,12 +165,17 @@ main
     margin-right: 5%;
     margin-bottom: 4%;
 }
+
 #form
 {
     margin-top: 2%;
     margin-bottom: 3%;
     text-align: center;
 }
+
+/*------------------------------ Connexion et inscription -----------------------------------*/
+/*------------------------------ Connexion et inscription -----------------------------------*/
+/*------------------------------ Connexion et inscription -----------------------------------*/
 #signin-button
 {
     cursor: pointer;
@@ -185,21 +201,9 @@ main
     color: black;
 }
 
-#adminpage
-{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 7%;
-}
-#download
-{
-    justify-content: column;
-    text-align: center;
-    align-items: center;
-    height: 10%;
-    margin-bottom: 5%;
-    padding: 0;
-}
+/*------------------- bouton2 -----------------------------*/
+/*------------------- bouton2 -----------------------------*/
+/*------------------- bouton2 -----------------------------*/
 #btn2
 {
     text-decoration: none;
@@ -222,6 +226,10 @@ main
     text-decoration: none;
     color: #000;
 }
+
+/*------------------ Admin -----------------------*/
+/*------------------ Admin -----------------------*/
+/*------------------ Admin -----------------------*/
 #signaler
 {
     justify-content: column;
@@ -231,10 +239,61 @@ main
     margin-bottom: 5%;
     padding: 0;
 }
+#adminpage
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7%;
+}
+#download
+{
+    justify-content: column;
+    text-align: center;
+    align-items: center;
+    height: 10%;
+    margin-bottom: 5%;
+    padding: 0;
+}
+
+/*------------------- Boutique --------------------*/
+/*------------------- Boutique --------------------*/
+/*------------------- Boutique --------------------*/
 #wrap
 {
     display: flex;
     flex-wrap: wrap;
+}
+#btnadd
+{
+   text-decoration: none;
+   text-align: center;
+   border: none;
+   color: black;
+   padding: 0;
+   margin-top: 1%;
+   font-size: 20px;
+   width: 100%;
+   height: 200%;
+   font-family: Arial, Helvetica, sans-serif;
+   cursor: pointer;
+   background-color: rgb(10, 143, 10);
+   border-radius: 50px 50px 50px 50px;
+}
+#btnsuppr
+{
+   text-decoration: none;
+   text-align: center;
+   border: none;
+   color: black;
+   padding: 0;
+   margin-top: 1%;
+   font-size: 20px;
+   width: 100%;
+   height: 300%;
+   font-family: Arial, Helvetica, sans-serif;
+   cursor: pointer;
+   background-color: rgb(124, 6, 6);
+   border-radius: 50px 50px 50px 50px;
 }
 #produit
 {   background-size: 50px;
@@ -254,9 +313,10 @@ main
     width: 20%;
     size: 50%;
 }
-#infoproduit
-{  
-}
+
+/*-------- Event ----------*/
+/*-------- Event ----------*/
+/*-------- Event ----------*/
 #event
 {
     background-size: 50px;
@@ -272,6 +332,7 @@ main
 #liencar
 {
     text-decoration: none;
+    color: white;
 }
 input
 {
@@ -280,6 +341,9 @@ input
     border: 1px white;
 }
 
+/*------- footer----------*/
+/*------- footer----------*/
+/*------- footer----------*/
 footer
 {
     background-color: white;
@@ -305,6 +369,16 @@ footer
     margin-left: auto;
 }
 
+/*--------------------- Page mentions légales ------------------------*/
+/*--------------------- Page mentions légales ------------------------*/
+/*--------------------- Page mentions légales ------------------------*/
+#paperasse
+{
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 4%;
+}
 
 
                     /*----------------------------------------------------------------------*/
@@ -318,7 +392,7 @@ footer
 {
     html
     {
-        background-color: black;
+        background-color: #292929;
     }
 
     header
@@ -334,9 +408,6 @@ footer
     }
     #Logo_BDE
     {
-       margin-left: 25%;
-       margin-top: 1.5%;
-       height: 35%;
        width: 35%;
     }
     #Logo_CESI
@@ -369,18 +440,40 @@ footer
         background-color: #fff;
         border-radius: 50px 50px 50px 50px;
     }
+    #btn:hover
+    {
+        background-color: #000;
+        color: #fff;
+    }
+    #btn1:hover
+    {
+        background-color: #000;
+        color: #fff;
+    }
     #btn1
     {
         font-family: Arial, Helvetica, sans-serif;
         background-color: #fff;
-        width: 20%;
+        width: 40%;
         height: 20%;
         margin-top: 10%;
     }
     body
     {
         height: 100%;
-        background-color: #000;
+        background-color: #292929;
+    }
+    #wrap
+    {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #produit
+    {
+        margin-left: 0;
+        margin-right: 0;
+        width: 1000%;
     }
     #signin-button
     {
@@ -391,8 +484,8 @@ footer
     #signin-button:hover
     {
         cursor: pointer;
-        background-color: #fff;
-        color: black;
+        background-color: #000;
+        color: #fff;
     }
     #login-button
     {
@@ -403,8 +496,8 @@ footer
     #login-button:hover
     {
         cursor: pointer;
-        background-color: #fff;
-        color: black;
+        background-color: #000;
+        color: #fff;
     }
 	
     /*------- Page mentions légales----------*/
@@ -421,7 +514,7 @@ footer
     {
         position: bottom;
         background-color: #fff;
-        height: 10vh;
+        height: 9vh;
         margin-bottom: 0%;
     }
     #footerlogo
