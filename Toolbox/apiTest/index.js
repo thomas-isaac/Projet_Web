@@ -14,7 +14,7 @@ var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
 	password: "root",
-	database: "mydb"
+	database: "PROJET"
 });
 
 var event = {
@@ -33,6 +33,16 @@ con.connect(function(err) {
 
 .all(function(req,res){
 	res.json({message : "Welcome", methode : req.method})
+});
+
+	myRouter.route('/vote')
+
+.post(function(req,res){
+	var vote = "INSERT INTO voter (ID_USER, ID_EVENT, VOTE_EVENT) VALUES ?";
+	con.query(vote, [req.body.eventId, req.body.userId, 1], function(err, result){
+		if(err) throw err;
+		res.json({result});
+	});
 });
 
 	myRouter.route('/produits')
@@ -59,8 +69,8 @@ con.connect(function(err) {
 	myRouter.route('/events')
 
 .get(function(req,res){
-	var sql = "SELECT * FROM EVENT";
-	con.query(sql, function (err, result, fields) {
+	var getEvent = "SELECT * FROM EVENT";
+	con.query(getEvent, function (err, result, fields) {
 		if (err) throw err;
 		res.json({result});
 	});
@@ -82,9 +92,6 @@ con.connect(function(err) {
 })
 .put(function(req,res){
 	res.json({message : "Modify events", methode : req.method});
-})
-.delete(function(req,res){
-	res.json({message : "Delete events", methode : req.method});
 });
 
 
@@ -97,7 +104,12 @@ con.connect(function(err) {
 	res.json({message : "Modify infos for event " + req.params.event_id});
 })
 .delete(function(req,res){
-	res.json({message : "Delete event " + req.params.event_id});
+	var eventId = req.body.eventId;
+	var del = "DELETE FROM event WHERE EVENT_ID = ?";	
+	con.query(del, eventId, function(err, result){
+		if(err) throw err;
+		res.json({message : "Delete event " + req.params.event_id});
+	});
 });
 
 
@@ -105,6 +117,3 @@ app.use(myRouter);
 app.listen(port, hostname, function(){
 	console.log("Server listening on http://"+ hostname +":"+port+"\n");
 });
-
-//con.end((err) => {
-//});
