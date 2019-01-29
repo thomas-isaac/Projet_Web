@@ -28,6 +28,8 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="register" class="animate form">
+                            <?php 
+                            if($_SESSION['logBDE'] == 1){ ?>
                             <form enctype="multipart/form-data" method="post" action="scriptProduit.php" autocomplete="on"> 
                                 <h1> Inscription </h1> 
                                 <p> 
@@ -59,6 +61,11 @@
                                     <input type="submit" value="Upload Image" name="submit"/> 
                                 </p>
                             </form>
+                            <?php }else{
+                            echo "Vous n'avez pas les droits pour accéder à ce contenue";?>
+                            <li><a href="connexion.php">connection</a></li>
+        
+                             <?php } ?>
                         </div>
               
                     </div>
